@@ -1,0 +1,1062 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "pulse_controller.v" in library work
+Compiling verilog file "StopWatch.v" in library work
+Module <pulse_controller> compiled
+Compiling verilog file "split_output.v" in library work
+Module <StopWatch> compiled
+Compiling verilog file "Clock.v" in library work
+Module <split_output> compiled
+Compiling verilog file "WatchMode.v" in library work
+Module <Clock> compiled
+Compiling verilog file "sevenseg.v" in library work
+Module <WatchMode> compiled
+Compiling verilog file "Calendar.v" in library work
+Module <sevenseg> compiled
+Compiling verilog file "Top.v" in library work
+Module <Calendar> compiled
+Module <Top> compiled
+No errors in compilation
+Analysis of file <"Top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Top> in library <work>.
+
+Analyzing hierarchy for module <Calendar> in library <work> with parameters.
+	agust = "00011111"
+	aralik = "00011111"
+	ekim = "00011111"
+	eylul = "00011110"
+	haziran = "00011110"
+	kasim = "00011110"
+	mart = "00011111"
+	mayis = "00011111"
+	nisan = "00011110"
+	ocak = "00011111"
+	setDay = "00"
+	setMonth = "01"
+	setYear = "10"
+	subat = "00011100"
+	temmuz = "00011111"
+
+Analyzing hierarchy for module <WatchMode> in library <work>.
+
+Analyzing hierarchy for module <sevenseg> in library <work> with parameters.
+	N = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <pulse_controller> in library <work>.
+
+Analyzing hierarchy for module <split_output> in library <work>.
+
+Analyzing hierarchy for module <Clock> in library <work> with parameters.
+	setHour = "00000000000000000000000000000000"
+	setMinute = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <StopWatch> in library <work> with parameters.
+	first = "00"
+	second = "01"
+	third = "10"
+
+Analyzing hierarchy for module <pulse_controller> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Top>.
+WARNING:Xst:905 - "Top.v" line 37: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <calDigit1>, <calDigit2>, <calDigit3>, <calDigit4>, <calblink>, <watchDigit1>, <watchDigit2>, <watchDigit3>, <watchDigit4>, <watchBlink>
+Module <Top> is correct for synthesis.
+ 
+Analyzing module <Calendar> in library <work>.
+	agust = 8'b00011111
+	aralik = 8'b00011111
+	ekim = 8'b00011111
+	eylul = 8'b00011110
+	haziran = 8'b00011110
+	kasim = 8'b00011110
+	mart = 8'b00011111
+	mayis = 8'b00011111
+	nisan = 8'b00011110
+	ocak = 8'b00011111
+	setDay = 2'b00
+	setMonth = 2'b01
+	setYear = 2'b10
+	subat = 8'b00011100
+	temmuz = 8'b00011111
+Module <Calendar> is correct for synthesis.
+ 
+Analyzing module <pulse_controller> in library <work>.
+Module <pulse_controller> is correct for synthesis.
+ 
+Analyzing module <split_output> in library <work>.
+Module <split_output> is correct for synthesis.
+ 
+Analyzing module <WatchMode> in library <work>.
+WARNING:Xst:905 - "WatchMode.v" line 44: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <hourLeft>, <hourRight>, <minLeft>, <minRight>, <leftLeft>, <leftRight>, <rightLeft>, <rightRight>
+Module <WatchMode> is correct for synthesis.
+ 
+Analyzing module <Clock> in library <work>.
+	setHour = 32'sb00000000000000000000000000000000
+	setMinute = 32'sb00000000000000000000000000000001
+Module <Clock> is correct for synthesis.
+ 
+Analyzing module <StopWatch> in library <work>.
+	first = 2'b00
+	second = 2'b01
+	third = 2'b10
+WARNING:Xst:905 - "StopWatch.v" line 113: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <minLeft>, <minRight>, <maxLeft>, <maxRight>, <historyLeft>, <historyRight>
+Module <StopWatch> is correct for synthesis.
+ 
+Analyzing module <sevenseg> in library <work>.
+	N = 32'sb00000000000000000000000000010010
+WARNING:Xst:2725 - "sevenseg.v" line 129: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 130: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 131: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 132: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 133: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 134: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 135: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 136: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 137: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "sevenseg.v" line 138: Size mismatch between case item and case selector.
+Module <sevenseg> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sevenseg>.
+    Related source file is "sevenseg.v".
+    Found 16x7-bit ROM for signal <sseg_temp$mux0000>.
+    Found 4-bit 4-to-1 multiplexer for signal <an_temp>.
+    Found 27-bit up counter for signal <cnt_clk>.
+    Found 18-bit up counter for signal <count>.
+    Found 1-bit register for signal <on_off>.
+    Found 7-bit 4-to-1 multiplexer for signal <sseg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <sevenseg> synthesized.
+
+
+Synthesizing Unit <pulse_controller>.
+    Related source file is "pulse_controller.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | clear                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 21-bit register for signal <CNT>.
+    Found 21-bit subtractor for signal <CNT$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pulse_controller> synthesized.
+
+
+Synthesizing Unit <split_output>.
+    Related source file is "split_output.v".
+    Found 8-bit comparator greatequal for signal <left$cmp_ge0000> created at line 24.
+    Found 8-bit comparator greatequal for signal <left$cmp_ge0001> created at line 24.
+    Found 8-bit comparator greatequal for signal <left$cmp_ge0002> created at line 24.
+    Found 8-bit comparator greatequal for signal <left$cmp_ge0003> created at line 24.
+    Found 8-bit comparator greatequal for signal <left$cmp_ge0004> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0000> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0001> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0002> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0003> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0004> created at line 24.
+    Found 8-bit comparator less for signal <left$cmp_lt0005> created at line 24.
+    Found 4-bit subtractor for signal <right$share0000> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+Unit <split_output> synthesized.
+
+
+Synthesizing Unit <Calendar>.
+    Related source file is "Calendar.v".
+    Found finite state machine <FSM_1> for signal <settingNow>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | btn0                      (rising_edge)        |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <currentMount>.
+    Found 8-bit up counter for signal <day>.
+    Found 8-bit comparator greater for signal <day$cmp_gt0000> created at line 117.
+    Found 4-bit up counter for signal <hundreds>.
+    Found 8-bit up counter for signal <mounth>.
+    Found 8-bit comparator lessequal for signal <mounth$cmp_le0000> created at line 117.
+    Found 4-bit up counter for signal <ones>.
+    Found 1-bit register for signal <show>.
+    Found 4-bit up counter for signal <tens>.
+    Found 4-bit up counter for signal <thousents>.
+    Found 16-bit up counter for signal <year>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   7 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <Calendar> synthesized.
+
+
+Synthesizing Unit <Clock>.
+    Related source file is "Clock.v".
+WARNING:Xst:1780 - Signal <clk_minute> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <newDay>.
+    Found 26-bit up counter for signal <cnt_clk>.
+    Found 5-bit register for signal <cnt_hour>.
+    Found 5-bit addsub for signal <cnt_hour$share0000>.
+    Found 7-bit register for signal <cnt_minute>.
+    Found 7-bit addsub for signal <cnt_minute$share0000>.
+    Found 7-bit up counter for signal <cnt_second>.
+    Found 1-bit register for signal <settingNow>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <Clock> synthesized.
+
+
+Synthesizing Unit <StopWatch>.
+    Related source file is "StopWatch.v".
+WARNING:Xst:646 - Signal <reset> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 8-bit latch for signal <historyLeft>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <historyRight>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <maxLeft>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <maxRight>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <minLeft>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <minRight>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <histDisp_left>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <histDisp_right>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 26-bit up counter for signal <cnt_clk>.
+    Found 8-bit up counter for signal <cnt_left>.
+    Found 8-bit up counter for signal <cnt_right>.
+    Found 2-bit up counter for signal <display>.
+    Found 8-bit 3-to-1 multiplexer for signal <histDisp_left$mux0000>.
+    Found 8-bit 3-to-1 multiplexer for signal <histDisp_right$mux0000>.
+    Found 8-bit comparator less for signal <maxLeft$cmp_lt0000> created at line 84.
+    Found 8-bit comparator greater for signal <minLeft$cmp_gt0000> created at line 94.
+    Found 2-bit adder for signal <old_display_6$add0000> created at line 139.
+    Found 1-bit register for signal <start>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <StopWatch> synthesized.
+
+
+Synthesizing Unit <WatchMode>.
+    Related source file is "WatchMode.v".
+Unit <WatchMode> synthesized.
+
+
+Synthesizing Unit <Top>.
+    Related source file is "Top.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <Top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 12
+ 2-bit adder                                           : 1
+ 21-bit subtractor                                     : 3
+ 4-bit subtractor                                      : 6
+ 5-bit addsub                                          : 1
+ 7-bit addsub                                          : 1
+# Counters                                             : 14
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 4
+# Registers                                            : 11
+ 1-bit register                                        : 5
+ 21-bit register                                       : 3
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 8
+ 8-bit latch                                           : 8
+# Comparators                                          : 70
+ 8-bit comparator greatequal                           : 30
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 37
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 4
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 3-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <cccc/settingNow/FSM> on signal <settingNow[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <cccc/sync/state/FSM> on signal <state[1:3]> with gray encoding.
+Optimizing FSM <wat/timer/sync/state/FSM> on signal <state[1:3]> with gray encoding.
+Optimizing FSM <wat/watch/sync/state/FSM> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+-------------------
+WARNING:Xst:1293 - FF/Latch <currentMount_5> has a constant value of 0 in block <cccc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <currentMount_6> has a constant value of 0 in block <cccc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <currentMount_7> has a constant value of 0 in block <cccc>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 12
+ 2-bit adder                                           : 1
+ 21-bit subtractor                                     : 3
+ 4-bit subtractor                                      : 6
+ 5-bit addsub                                          : 1
+ 7-bit addsub                                          : 1
+# Counters                                             : 14
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 2
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 4
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+# Latches                                              : 8
+ 8-bit latch                                           : 8
+# Comparators                                          : 70
+ 8-bit comparator greatequal                           : 30
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 37
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 4
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 3-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <currentMount_5> has a constant value of 0 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_6> has a constant value of 0 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_7> has a constant value of 0 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Top> ...
+
+Optimizing unit <sevenseg> ...
+
+Optimizing unit <pulse_controller> ...
+
+Optimizing unit <split_output> ...
+
+Optimizing unit <Calendar> ...
+WARNING:Xst:1293 - FF/Latch <currentMount_2> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_3> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_4> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <currentMount_2> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_3> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_4> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <currentMount_2> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_3> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_4> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <currentMount_2> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_3> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentMount_4> has a constant value of 1 in block <Calendar>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Clock> ...
+
+Optimizing unit <StopWatch> ...
+
+Optimizing unit <WatchMode> ...
+WARNING:Xst:2677 - Node <wat/watch/histDisp_right_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <wat/watch/histDisp_left_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <wat/watch/minRight_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <wat/watch/maxRight_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <wat/watch/historyRight_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <wat/watch/historyLeft_7> of sequential type is unconnected in block <Top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 47.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 247
+ Flip-Flops                                            : 247
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top.ngr
+Top Level Output File Name         : Top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 1291
+#      GND                         : 1
+#      INV                         : 86
+#      LUT1                        : 127
+#      LUT2                        : 43
+#      LUT2_D                      : 1
+#      LUT2_L                      : 4
+#      LUT3                        : 90
+#      LUT3_D                      : 7
+#      LUT3_L                      : 2
+#      LUT4                        : 417
+#      LUT4_D                      : 8
+#      LUT4_L                      : 33
+#      MUXCY                       : 242
+#      MUXF5                       : 37
+#      VCC                         : 1
+#      XORCY                       : 192
+# FlipFlops/Latches                : 305
+#      FD                          : 84
+#      FDC                         : 9
+#      FDE                         : 9
+#      FDR                         : 28
+#      FDRE                        : 115
+#      FDSE                        : 2
+#      LD                          : 44
+#      LD_1                        : 14
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 9
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      429  out of    960    44%  
+ Number of Slice Flip Flops:            305  out of   1920    15%  
+ Number of 4 input LUTs:                818  out of   1920    42%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  22  out of     83    26%  
+ Number of GCLKs:                         4  out of     24    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------+------------------------------------+-------+
+Clock Signal                                                             | Clock buffer(FF name)              | Load  |
+-------------------------------------------------------------------------+------------------------------------+-------+
+clk                                                                      | BUFGP                              | 240   |
+btn0                                                                     | IBUF+BUFG                          | 3     |
+cccc/buttonPush(cccc/sync/state_FSM_Out01:O)                             | NONE(*)(cccc/show)                 | 1     |
+btn3                                                                     | IBUF+BUFG                          | 3     |
+wat/watch/histDisp_left_cmp_eq0000(wat/watch/histDisp_left_cmp_eq00001:O)| NONE(*)(wat/watch/histDisp_right_0)| 14    |
+sw5                                                                      | IBUF+BUFG                          | 44    |
+-------------------------------------------------------------------------+------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-------------------------------+-------+
+Control Signal                     | Buffer(FF name)               | Load  |
+-----------------------------------+-------------------------------+-------+
+N0(XST_GND:G)                      | NONE(cccc/sync/state_FSM_FFd1)| 9     |
+-----------------------------------+-------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.765ns (Maximum Frequency: 173.455MHz)
+   Minimum input arrival time before clock: 7.890ns
+   Maximum output required time after clock: 13.046ns
+   Maximum combinational path delay: 13.972ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.765ns (frequency: 173.455MHz)
+  Total number of paths / destination ports: 7199 / 450
+-------------------------------------------------------------------------
+Delay:               5.765ns (Levels of Logic = 9)
+  Source:            wat/timer/cnt_clk_5 (FF)
+  Destination:       wat/timer/cnt_clk_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: wat/timer/cnt_clk_5 to wat/timer/cnt_clk_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.514   0.532  wat/timer/cnt_clk_5 (wat/timer/cnt_clk_5)
+     LUT2:I0->O            1   0.612   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_lut<0> (wat/timer/cnt_clk_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<0> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<1> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<2> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<3> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<4> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  wat/timer/cnt_clk_cmp_eq0000_wg_cy<5> (wat/timer/cnt_clk_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           4   0.399   0.568  wat/timer/cnt_clk_cmp_eq0000_wg_cy<6> (wat/timer/cnt_clk_cmp_eq0000)
+     LUT2:I1->O           26   0.612   1.071  wat/timer/cnt_clk_and00001 (wat/timer/cnt_clk_and0000)
+     FDRE:R                    0.795          wat/timer/cnt_clk_0
+    ----------------------------------------
+    Total                      5.765ns (3.594ns logic, 2.171ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'btn0'
+  Clock period: 3.023ns (frequency: 330.764MHz)
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Delay:               3.023ns (Levels of Logic = 1)
+  Source:            wat/timer/settingNow (FF)
+  Destination:       wat/timer/settingNow (FF)
+  Source Clock:      btn0 rising
+  Destination Clock: btn0 rising
+
+  Data Path: wat/timer/settingNow to wat/timer/settingNow
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.603  wat/timer/settingNow (wat/timer/settingNow)
+     LUT2:I0->O            4   0.612   0.499  wat/timer/settingNow_not00011 (wat/timer/settingNow_not0001)
+     FDR:R                     0.795          wat/timer/settingNow
+    ----------------------------------------
+    Total                      3.023ns (1.921ns logic, 1.102ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cccc/buttonPush'
+  Clock period: 2.544ns (frequency: 393.074MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.544ns (Levels of Logic = 1)
+  Source:            cccc/show (FF)
+  Destination:       cccc/show (FF)
+  Source Clock:      cccc/buttonPush rising
+  Destination Clock: cccc/buttonPush rising
+
+  Data Path: cccc/show to cccc/show
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.514   0.793  cccc/show (cccc/show)
+     INV:I->O              1   0.612   0.357  cccc/show_not00011_INV_0 (cccc/show_not0001)
+     FDE:D                     0.268          cccc/show
+    ----------------------------------------
+    Total                      2.544ns (1.394ns logic, 1.150ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'btn3'
+  Clock period: 3.526ns (frequency: 283.643MHz)
+  Total number of paths / destination ports: 8 / 5
+-------------------------------------------------------------------------
+Delay:               3.526ns (Levels of Logic = 1)
+  Source:            wat/watch/display_1 (FF)
+  Destination:       wat/watch/display_0 (FF)
+  Source Clock:      btn3 rising
+  Destination Clock: btn3 rising
+
+  Data Path: wat/watch/display_1 to wat/watch/display_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            31   0.514   1.225  wat/watch/display_1 (wat/watch/display_1)
+     LUT3:I0->O            2   0.612   0.380  wat/watch/display_and00001 (wat/watch/display_and0000)
+     FDRE:R                    0.795          wat/watch/display_0
+    ----------------------------------------
+    Total                      3.526ns (1.921ns logic, 1.605ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sw5'
+  Clock period: 4.756ns (frequency: 210.256MHz)
+  Total number of paths / destination ports: 674 / 44
+-------------------------------------------------------------------------
+Delay:               4.756ns (Levels of Logic = 9)
+  Source:            wat/watch/maxLeft_1 (LATCH)
+  Destination:       wat/watch/maxRight_0 (LATCH)
+  Source Clock:      sw5 falling
+  Destination Clock: sw5 falling
+
+  Data Path: wat/watch/maxLeft_1 to wat/watch/maxRight_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               6   0.588   0.721  wat/watch/maxLeft_1 (wat/watch/maxLeft_1)
+     LUT2:I0->O            1   0.612   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_lut<1> (wat/watch/Mcompar_maxLeft_cmp_lt0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<1> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<2> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<3> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<4> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<5> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<6> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<6>)
+     MUXCY:CI->O          15   0.399   0.894  wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<7> (wat/watch/Mcompar_maxLeft_cmp_lt0000_cy<7>)
+     LUT4:I2->O            1   0.612   0.000  wat/watch/maxRight_mux0000<7>1 (wat/watch/maxRight_mux0000<7>)
+     LD:D                      0.268          wat/watch/maxRight_0
+    ----------------------------------------
+    Total                      4.756ns (3.141ns logic, 1.615ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 334 / 212
+-------------------------------------------------------------------------
+Offset:              7.890ns (Levels of Logic = 5)
+  Source:            btn0 (PAD)
+  Destination:       wat/watch/cnt_right_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn0 to wat/watch/cnt_right_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.568  btn0_IBUF (btn0_IBUF1)
+     LUT2:I1->O           28   0.612   1.224  wat/watch/cnt_left_or000011 (wat/watch/cnt_clk_not0001)
+     LUT4:I0->O            1   0.612   0.000  wat/watch/cnt_right_or00001_wg_lut<6> (wat/watch/cnt_right_or00001_wg_lut<6>)
+     MUXCY:S->O           36   0.641   1.077  wat/watch/cnt_right_or00001_wg_cy<6> (wat/watch/cnt_clk_and0000)
+     LUT4:I3->O            8   0.612   0.643  wat/watch/cnt_right_or00001 (wat/watch/cnt_right_or0000)
+     FDRE:R                    0.795          wat/watch/cnt_right_0
+    ----------------------------------------
+    Total                      7.890ns (4.378ns logic, 3.512ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'btn0'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.070ns (Levels of Logic = 2)
+  Source:            sw4 (PAD)
+  Destination:       wat/timer/settingNow (FF)
+  Destination Clock: btn0 rising
+
+  Data Path: sw4 to wat/timer/settingNow
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.106   1.058  sw4_IBUF (sw4_IBUF)
+     LUT2:I1->O            4   0.612   0.499  wat/timer/settingNow_not00011 (wat/timer/settingNow_not0001)
+     FDR:R                     0.795          wat/timer/settingNow
+    ----------------------------------------
+    Total                      4.070ns (2.513ns logic, 1.557ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cccc/buttonPush'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.657ns (Levels of Logic = 2)
+  Source:            sw5 (PAD)
+  Destination:       cccc/show (FF)
+  Destination Clock: cccc/buttonPush rising
+
+  Data Path: sw5 to cccc/show
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   1.106   1.076  sw5_IBUF (sw5_IBUF1)
+     INV:I->O              2   0.612   0.380  wat/watch/sw5_inv1_INV_0 (cccc/sw5_inv)
+     FDE:CE                    0.483          cccc/show
+    ----------------------------------------
+    Total                      3.657ns (2.201ns logic, 1.456ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'btn3'
+  Total number of paths / destination ports: 13 / 5
+-------------------------------------------------------------------------
+Offset:              5.211ns (Levels of Logic = 3)
+  Source:            sw2 (PAD)
+  Destination:       wat/watch/display_0 (FF)
+  Destination Clock: btn3 rising
+
+  Data Path: sw2 to wat/watch/display_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.106   1.225  sw2_IBUF (sw2_IBUF)
+     LUT3:I0->O            3   0.612   0.481  wat/watch/display_and000011 (wat/watch/display_not0001)
+     LUT3:I2->O            2   0.612   0.380  wat/watch/display_and00001 (wat/watch/display_and0000)
+     FDRE:R                    0.795          wat/watch/display_0
+    ----------------------------------------
+    Total                      5.211ns (3.125ns logic, 2.086ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sw5'
+  Total number of paths / destination ports: 192 / 44
+-------------------------------------------------------------------------
+Offset:              6.050ns (Levels of Logic = 4)
+  Source:            sw1 (PAD)
+  Destination:       wat/watch/minRight_0 (LATCH)
+  Destination Clock: sw5 falling
+
+  Data Path: sw1 to wat/watch/minRight_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.106   1.103  sw1_IBUF (sw1_IBUF)
+     LUT4:I2->O           44   0.612   1.228  wat/watch/maxLeft_mux0000<0>31 (wat/watch/N5)
+     LUT4:I0->O            1   0.612   0.509  wat/watch/minRight_mux0000<7>1_SW0 (N147)
+     LUT4:I0->O            1   0.612   0.000  wat/watch/minRight_mux0000<7>1 (wat/watch/minRight_mux0000<7>)
+     LD:D                      0.268          wat/watch/minRight_0
+    ----------------------------------------
+    Total                      6.050ns (3.210ns logic, 2.840ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2729 / 11
+-------------------------------------------------------------------------
+Offset:              12.717ns (Levels of Logic = 9)
+  Source:            wat/watch/cnt_left_3 (FF)
+  Destination:       a (PAD)
+  Source Clock:      clk rising
+
+  Data Path: wat/watch/cnt_left_3 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.514   0.766  wat/watch/cnt_left_3 (wat/watch/cnt_left_3)
+     LUT3:I1->O           12   0.612   0.969  wat/watch/secLeft<3>1 (wat/secLeft<3>)
+     LUT4:I0->O            1   0.612   0.387  Digit1<0>233 (Digit1<0>233)
+     LUT4:I2->O            1   0.612   0.387  Digit1<0>310 (Digit1<0>310)
+     LUT3:I2->O            1   0.612   0.426  Digit1<0>351_SW0 (N301)
+     LUT4:I1->O            1   0.612   0.426  Digit1<0>351 (Digit1<0>)
+     LUT3:I1->O            1   0.612   0.000  decoder/Mmux_sseg_4 (decoder/Mmux_sseg_4)
+     MUXF5:I0->O           7   0.278   0.754  decoder/Mmux_sseg_2_f5 (decoder/sseg<0>)
+     LUT4:I0->O            1   0.612   0.357  decoder/Mrom_sseg_temp_mux000011 (a_OBUF)
+     OBUF:I->O                 3.169          a_OBUF (a)
+    ----------------------------------------
+    Total                     12.717ns (8.245ns logic, 4.472ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'wat/watch/histDisp_left_cmp_eq0000'
+  Total number of paths / destination ports: 917 / 7
+-------------------------------------------------------------------------
+Offset:              12.435ns (Levels of Logic = 9)
+  Source:            wat/watch/histDisp_left_3 (LATCH)
+  Destination:       a (PAD)
+  Source Clock:      wat/watch/histDisp_left_cmp_eq0000 rising
+
+  Data Path: wat/watch/histDisp_left_3 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             2   0.588   0.410  wat/watch/histDisp_left_3 (wat/watch/histDisp_left_3)
+     LUT3:I2->O           12   0.612   0.969  wat/watch/secLeft<3>1 (wat/secLeft<3>)
+     LUT4:I0->O            1   0.612   0.387  Digit1<0>233 (Digit1<0>233)
+     LUT4:I2->O            1   0.612   0.387  Digit1<0>310 (Digit1<0>310)
+     LUT3:I2->O            1   0.612   0.426  Digit1<0>351_SW0 (N301)
+     LUT4:I1->O            1   0.612   0.426  Digit1<0>351 (Digit1<0>)
+     LUT3:I1->O            1   0.612   0.000  decoder/Mmux_sseg_4 (decoder/Mmux_sseg_4)
+     MUXF5:I0->O           7   0.278   0.754  decoder/Mmux_sseg_2_f5 (decoder/sseg<0>)
+     LUT4:I0->O            1   0.612   0.357  decoder/Mrom_sseg_temp_mux000011 (a_OBUF)
+     OBUF:I->O                 3.169          a_OBUF (a)
+    ----------------------------------------
+    Total                     12.435ns (8.319ns logic, 4.116ns route)
+                                       (66.9% logic, 33.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'btn0'
+  Total number of paths / destination ports: 202 / 11
+-------------------------------------------------------------------------
+Offset:              13.046ns (Levels of Logic = 9)
+  Source:            cccc/settingNow_FSM_FFd1 (FF)
+  Destination:       a (PAD)
+  Source Clock:      btn0 rising
+
+  Data Path: cccc/settingNow_FSM_FFd1 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.514   0.894  cccc/settingNow_FSM_FFd1 (cccc/settingNow_FSM_FFd1)
+     LUT3:I2->O           11   0.612   0.823  cccc/digit1<0>11 (cccc/N0)
+     LUT3:I2->O            4   0.612   0.651  Digit3<0>98 (Digit3<0>98)
+     LUT4:I0->O            1   0.612   0.509  Digit3<0>140_SW0 (N311)
+     LUT4:I0->O            1   0.612   0.387  Digit3<0>140 (Digit3<0>140)
+     LUT4:I2->O            1   0.612   0.426  Digit3<0>422 (Digit3<0>)
+     LUT3:I1->O            1   0.612   0.000  decoder/Mmux_sseg_3 (decoder/Mmux_sseg_3)
+     MUXF5:I1->O           7   0.278   0.754  decoder/Mmux_sseg_2_f5 (decoder/sseg<0>)
+     LUT4:I0->O            1   0.612   0.357  decoder/Mrom_sseg_temp_mux000011 (a_OBUF)
+     OBUF:I->O                 3.169          a_OBUF (a)
+    ----------------------------------------
+    Total                     13.046ns (8.245ns logic, 4.801ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cccc/buttonPush'
+  Total number of paths / destination ports: 182 / 7
+-------------------------------------------------------------------------
+Offset:              13.014ns (Levels of Logic = 9)
+  Source:            cccc/show (FF)
+  Destination:       a (PAD)
+  Source Clock:      cccc/buttonPush rising
+
+  Data Path: cccc/show to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.514   0.862  cccc/show (cccc/show)
+     LUT3:I1->O           11   0.612   0.823  cccc/digit1<0>11 (cccc/N0)
+     LUT3:I2->O            4   0.612   0.651  Digit3<0>98 (Digit3<0>98)
+     LUT4:I0->O            1   0.612   0.509  Digit3<0>140_SW0 (N311)
+     LUT4:I0->O            1   0.612   0.387  Digit3<0>140 (Digit3<0>140)
+     LUT4:I2->O            1   0.612   0.426  Digit3<0>422 (Digit3<0>)
+     LUT3:I1->O            1   0.612   0.000  decoder/Mmux_sseg_3 (decoder/Mmux_sseg_3)
+     MUXF5:I1->O           7   0.278   0.754  decoder/Mmux_sseg_2_f5 (decoder/sseg<0>)
+     LUT4:I0->O            1   0.612   0.357  decoder/Mrom_sseg_temp_mux000011 (a_OBUF)
+     OBUF:I->O                 3.169          a_OBUF (a)
+    ----------------------------------------
+    Total                     13.014ns (8.245ns logic, 4.769ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1441 / 11
+-------------------------------------------------------------------------
+Delay:               13.972ns (Levels of Logic = 10)
+  Source:            sw5 (PAD)
+  Destination:       a (PAD)
+
+  Data Path: sw5 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   1.106   1.228  sw5_IBUF (sw5_IBUF1)
+     LUT3:I0->O           11   0.612   0.823  cccc/digit1<0>11 (cccc/N0)
+     LUT3:I2->O            4   0.612   0.651  Digit3<0>98 (Digit3<0>98)
+     LUT4:I0->O            1   0.612   0.509  Digit3<0>140_SW0 (N311)
+     LUT4:I0->O            1   0.612   0.387  Digit3<0>140 (Digit3<0>140)
+     LUT4:I2->O            1   0.612   0.426  Digit3<0>422 (Digit3<0>)
+     LUT3:I1->O            1   0.612   0.000  decoder/Mmux_sseg_3 (decoder/Mmux_sseg_3)
+     MUXF5:I1->O           7   0.278   0.754  decoder/Mmux_sseg_2_f5 (decoder/sseg<0>)
+     LUT4:I0->O            1   0.612   0.357  decoder/Mrom_sseg_temp_mux000011 (a_OBUF)
+     OBUF:I->O                 3.169          a_OBUF (a)
+    ----------------------------------------
+    Total                     13.972ns (8.837ns logic, 5.135ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.03 secs
+ 
+--> 
+
+Total memory usage is 283928 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   57 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ferit/Digital_Calendar/WatchMode.xst" -ofn "C:/Users/Ferit/Digital_Calendar/WatchMode.syr" 

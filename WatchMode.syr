@@ -1,0 +1,153 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: WatchMode.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "WatchMode.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "WatchMode"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : WatchMode
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "StopWatch.v" in library work
+ERROR:HDLCompilers:26 - "StopWatch.v" line 47 expecting ':', found ';'
+ERROR:HDLCompilers:26 - "StopWatch.v" line 48 expecting ';', found ')'
+ERROR:HDLCompilers:26 - "StopWatch.v" line 48 unexpected token: ':'
+Module <StopWatch> compiled
+ERROR:HDLCompilers:26 - "StopWatch.v" line 48 expecting 'endmodule', found '('
+ERROR:HDLCompilers:26 - "StopWatch.v" line 50 unexpected token: ')'
+Compiling verilog file "split_output.v" in library work
+ERROR:HDLCompilers:26 - "split_output.v" line 21 unexpected token: 'output'
+ERROR:HDLCompilers:26 - "split_output.v" line 21 unexpected token: 'right'
+Compiling verilog file "Clock.v" in library work
+ERROR:HDLCompilers:26 - "Clock.v" line 21 unexpected token: 'output'
+ERROR:HDLCompilers:26 - "Clock.v" line 21 unexpected token: 'output'
+ERROR:HDLCompilers:26 - "Clock.v" line 21 unexpected token: 'output'
+Compiling verilog file "WatchMode.v" in library work
+ERROR:HDLCompilers:26 - "WatchMode.v" line 21 unexpected token: 'output'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 21 unexpected token: 'digit4'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 24 unexpected token: 'minute'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 25 unexpected token: 'minRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 26 unexpected token: 'hourRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 30 unexpected token: 'minRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 31 unexpected token: 'hour'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 31 unexpected token: 'hourRight'
+WARNING:HDLCompilers:171 - "WatchMode.v" line 32 Attribute 'minute' redefined
+ERROR:HDLCompilers:26 - "WatchMode.v" line 32 unexpected token: 'newDay'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 35 unexpected token: 'secRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 36 unexpected token: 'leftRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 37 unexpected token: 'rightRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 39 unexpected token: 'leftRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 40 unexpected token: 'rightRight'
+WARNING:HDLCompilers:171 - "WatchMode.v" line 42 Attribute 'sw5' redefined
+WARNING:HDLCompilers:171 - "WatchMode.v" line 42 Attribute 'sw2' redefined
+WARNING:HDLCompilers:171 - "WatchMode.v" line 42 Attribute 'sw1' redefined
+WARNING:HDLCompilers:171 - "WatchMode.v" line 42 Attribute 'btn3' redefined
+WARNING:HDLCompilers:171 - "WatchMode.v" line 42 Attribute 'btn0' redefined
+ERROR:HDLCompilers:26 - "WatchMode.v" line 42 unexpected token: 'secRight'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 63 expecting '*)', found 'EOF'
+ERROR:HDLCompilers:26 - "WatchMode.v" line 63 unexpected token: 'EOF'
+Analysis of file <"WatchMode.prj"> failed.
+--> 
+
+Total memory usage is 239732 kilobytes
+
+Number of errors   :   27 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

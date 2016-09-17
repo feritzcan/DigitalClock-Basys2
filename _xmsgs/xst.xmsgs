@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;Calendar.v&quot; line 42 </arg>Connection to input port &apos;<arg fmt="%s" index="2">clear</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;WatchMode.v&quot; line 29 </arg>Connection to input port &apos;<arg fmt="%s" index="2">total</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;Clock.v&quot; line 25 </arg>Connection to input port &apos;<arg fmt="%s" index="2">clear</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;WatchMode.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">total</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;WatchMode.v&quot; line 39 </arg>Connection to input port &apos;<arg fmt="%s" index="2">total</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;WatchMode.v&quot; line 41 </arg>Connection to output port &apos;<arg fmt="%s" index="2">secLeft</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;WatchMode.v&quot; line 41 </arg>Connection to output port &apos;<arg fmt="%s" index="2">secRight</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;StopWatch.v&quot; line 30 </arg>Connection to input port &apos;<arg fmt="%s" index="2">clear</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;Top.v&quot; line 34 </arg>Connection to input port &apos;<arg fmt="%s" index="2">reset</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">Top.v</arg>&quot; line <arg fmt="%d" index="2">37</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;calDigit1&gt;, &lt;calDigit2&gt;, &lt;calDigit3&gt;, &lt;calDigit4&gt;, &lt;calblink&gt;, &lt;watchDigit1&gt;, &lt;watchDigit2&gt;, &lt;watchDigit3&gt;, &lt;watchDigit4&gt;, &lt;watchBlink&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">WatchMode.v</arg>&quot; line <arg fmt="%d" index="2">44</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;hourLeft&gt;, &lt;hourRight&gt;, &lt;minLeft&gt;, &lt;minRight&gt;, &lt;leftLeft&gt;, &lt;leftRight&gt;, &lt;rightLeft&gt;, &lt;rightRight&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">StopWatch.v</arg>&quot; line <arg fmt="%d" index="2">113</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;minLeft&gt;, &lt;minRight&gt;, &lt;maxLeft&gt;, &lt;maxRight&gt;, &lt;historyLeft&gt;, &lt;historyRight&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">130</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">131</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">132</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">133</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">134</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">135</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">136</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">137</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">sevenseg.v</arg>&quot; line <arg fmt="%d" index="2">138</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">clk_minute</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">reset</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">historyLeft</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">historyRight</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">maxLeft</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">maxRight</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">minLeft</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">minRight</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">histDisp_left</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">histDisp_right</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">reset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cccc</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cccc</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cccc</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">currentMount_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentMount_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Calendar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/histDisp_right_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/histDisp_left_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/minRight_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/maxRight_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/historyRight_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">wat/watch/historyLeft_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

@@ -1,0 +1,31 @@
+
+# Pin assignment for 7-segment displays
+NET "a" LOC = "l14" ;
+NET "b" LOC = "h12" ;
+NET "c" LOC = "n14" ;
+NET "d" LOC = "n11" ;
+NET "e" LOC = "p12" ;
+NET "f" LOC = "l13" ;
+NET "g" LOC = "m12" ;
+NET "dp" LOC = "n13" ;
+
+NET "sw6" LOC="e2";
+NET "sw5" LOC="f3";
+NET "sw4" LOC="g3";
+NET "sw2" LOC = "k3";
+NET "sw1" LOC= "l3";
+NET "sw0" LOC="p11";
+NET "btn3" LOC="a7";
+NET "btn0" LOC="g12";
+NET "an[0]" LOC = "k14";
+NET "an[1]" LOC = "m13";
+NET "an[2]" LOC = "j12";
+NET "an[3]" LOC = "f12";
+NET "sw7" LOC= "n3";
+
+
+
+# Pin assignment for clock
+NET "clk" LOC = "b8";
+NET "btn0" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "sw5" CLOCK_DEDICATED_ROUTE = FALSE;

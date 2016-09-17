@@ -1,0 +1,4 @@
+verilog work "StopWatch.v"
+verilog work "split_output.v"
+verilog work "Clock.v"
+verilog work "WatchMode.v"

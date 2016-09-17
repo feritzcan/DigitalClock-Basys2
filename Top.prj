@@ -1,0 +1,8 @@
+verilog work "pulse_controller.v"
+verilog work "StopWatch.v"
+verilog work "split_output.v"
+verilog work "Clock.v"
+verilog work "WatchMode.v"
+verilog work "sevenseg.v"
+verilog work "Calendar.v"
+verilog work "Top.v"
